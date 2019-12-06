@@ -2,13 +2,20 @@ import React from 'react'
 import {Route} from 'react-router-dom'
 import PostList from './Posts/PostList'
 import FavourtiesPage from './FavourtiesPage/FavourtiesPage'
-import MajorSL from './MajorSL/MajorSL'
-import EnglishPL from './EnglishPL/EnglishPL'
+// import MajorSL from './MajorSL/MajorSL'
+// import EnglishPL from './EnglishPL/EnglishPL'
 import PostPage from './Posts/PostPage'
-import GermanBL from './GermanBL/GermanBL'
+// import GermanBL from './GermanBL/GermanBL'
 import Pagination from './Pagination/Pagination'
 import Sidebarsearch from './Widgets/Sidebarsearch'
 import Popularcategories from './Widgets/Popularcategories'
+import EnglishPL from './Posts/EnglishPL'
+import MajorSL from './Posts/MajorSL'
+import GermanBL from './Posts/GermanBL'
+import CategoryItem from './Posts/CategoryItem'
+import CategoryItemMSL from './Posts/CategoryItemsMSL'
+import CategorItemBL from './Posts/CategoryItemBL'
+
 
 const Main = ({
 	addPostToFavourites,
@@ -34,6 +41,31 @@ const Main = ({
 								addLike={addLike}
 						/>
 						)}/>
+						<Route path="/category/EnglishPL" exact render={()=>(
+							<EnglishPL
+								addPostToFavourites={addPostToFavourites}
+								postsLikeState={postsLikeState}
+								removeLike={removeLike}
+								addLike={addLike}
+						/>
+						)}/>
+						<Route path="/category/MajorSL" exact render={()=>(
+							<MajorSL
+								addPostToFavourites={addPostToFavourites}
+								postsLikeState={postsLikeState}
+								removeLike={removeLike}
+								addLike={addLike}
+						/>
+						)}/>
+						<Route path="/category/GermanBL" exact render={()=>(
+							<GermanBL
+								addPostToFavourites={addPostToFavourites}
+								postsLikeState={postsLikeState}
+								removeLike={removeLike}
+								addLike={addLike}
+						/>
+						)}/>
+
 						<Route path="/favourites" render={()=>(
 							<FavourtiesPage
 								postsInFavourites={postsInFavourites}
@@ -42,10 +74,11 @@ const Main = ({
 								
 						/>)}/>
 						<Route path="/MajorSL" component={MajorSL}/>
-						<Route path="/EnglishPL" component={EnglishPL}/>
+						{/* <Route path="/EnglishPL" component={EnglishPL}/> */}
 						<Route path="/GermanBL" component={GermanBL}/>
 						
 						<Route path="/posts/:postId" component={PostPage} />
+						{/* <Route path="/category/:categoryId" component={CategoryItem} /> */}
 					</div>
 
 					<hr className="invis"/>

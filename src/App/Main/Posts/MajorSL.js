@@ -1,12 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import PostListItem from '../Posts/PostListItem'
-import posts from '../Posts/posts'
+import PostListItem from './PostListItem'
+import posts from './posts'
 
-const MajorSL = () => {
+
+
+
+const MajorSL = ({
+    addPostToFavourites,
+    postsLikeState,
+    removeLike,
+    addLike
+}) => {
     return (
         <div>
-            <div class="page-title wb">
+
+        <div class="page-title wb">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -23,40 +32,48 @@ const MajorSL = () => {
                 </div>
             </div>
 
-            <div className="blog-list clearfix">
-
-            {
+        <div className="blog-list clearfix">
+                {
                     posts.filter((item)=>item.categoryId===2).map(({
-                        id,
-                        category,
                         categoryId,
-                        urlLink,
+                        id,
                         name,
                         description,
-                        date,
+                        category,
+                        initRating,
                         author,
-                        image
+                        urlLinkHead,
+                        urlLink,
+                        date,
+                        image,
                     })=> (
                         <div key={id}>
                             <PostListItem
-                                image={image}
-                                category={category}
+                                categoryId={categoryId}
+                                id={id}
                                 name={name}
                                 description={description}
-                                date={date}
+                                category={category}
                                 author={author}
+                                initRating={initRating}
+                                image={image}
+                                addPostToFavourites={addPostToFavourites}
+                                isLiked={postsLikeState[id]}
+                                removeLike={removeLike}
+                                addLike={addLike}
+                                date={date}
+                                urlLinkHead={urlLinkHead}
                                 urlLink={urlLink}
                             />
                             <hr className="invis"/>
                         </div> 
                     ))
                 }
-                
 
-             </div>
-
-
-        </div>
+            </div>
+            </div>
+        
     )
 }
+
 export default MajorSL

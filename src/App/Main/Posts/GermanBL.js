@@ -1,12 +1,18 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import PostListItem from '../Posts/PostListItem'
-import posts from '../Posts/posts'
+import CategoryItemBL from './CategoryItemBL'
+import posts from './posts'
 
-const GermanBL = () => {
+
+const GermanBL = ({
+    addPostToFavourites,
+    postsLikeState,
+    removeLike,
+    addLike
+}) => {
     return (
         <div>
-            <div class="page-title wb">
+        <div class="page-title wb">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -23,39 +29,47 @@ const GermanBL = () => {
                 </div>
             </div>
 
-            <div className="blog-list clearfix">
-
-            {
+        <div className="blog-list clearfix">
+                {
                     posts.filter((item)=>item.categoryId===3).map(({
-                        id,
-                        category,
                         categoryId,
-                        urlLink,
+                        id,
                         name,
                         description,
-                        date,
+                        category,
+                        initRating,
                         author,
-                        image
+                        urlLinkHead,
+                        urlLink,
+                        date,
+                        image,
                     })=> (
                         <div key={id}>
-                            <PostListItem
-                                image={image}
-                                category={category}
+                            <CategoryItemBL
+                                categoryId={categoryId}
+                                id={id}
                                 name={name}
                                 description={description}
-                                date={date}
+                                category={category}
                                 author={author}
+                                initRating={initRating}
+                                image={image}
+                                addPostToFavourites={addPostToFavourites}
+                                isLiked={postsLikeState[id]}
+                                removeLike={removeLike}
+                                addLike={addLike}
+                                date={date}
+                                urlLinkHead={urlLinkHead}
                                 urlLink={urlLink}
                             />
                             <hr className="invis"/>
                         </div> 
                     ))
                 }
-                
 
-             </div>
-
+            </div>
         </div>
     )
 }
+
 export default GermanBL

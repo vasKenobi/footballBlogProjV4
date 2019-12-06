@@ -2,8 +2,8 @@ const posts = [
     {
         id:1,
         categoryId:1,
-        urlLink:"/BlogFootballEPL",
-        urlLinkHead:"/EnglishPL",
+        urlLink:"/posts/1",
+        urlLinkHead:"/category/EnglishPL",
         name:"No Salah, Firmino or Mane in Liverpool and Manchester City combined XI",
         description:"Here we run through the best rated combined XI between Liverpool and Manchester City ahead of their highly anticipated match at Anfield on Sunday. Using Premier League ratings this season, only players with at least five appearances are considered, while injured and suspended players are ineligble.",
         description2:"After Manchester City head coach Pep Guardiola ruled out Ederson through injury, Adrian came into the XI by default as neither Alisson nor Claudio Bravo (or Kyle Walker in goal) have made enough appearances to be considered. Adrian generally performed well while Alisson was injured but the 32-year-old will only make the bench at Anfield.",
@@ -18,8 +18,8 @@ const posts = [
     {
         id:2,
         categoryId:2,
-        urlLink:"/BlogFootballMSL",
-        urlLinkHead:"/MajorSL",
+        urlLink:"/posts/2",
+        urlLinkHead:"/category/MajorSL",
         name:"Lodeiro vs Pozuelo: The creative pair central as Seattle meet Toronto",
         description:"It all comes down to this. The 2019 MLS season comes to a head on Sunday night in a repeat of the 2016 MLS Cup final. Three years ago, Seattle Sounders emerged victorious on penalities after the pair had played out a 0-0 draw at BMO Field, with Toronto FC came away from the clash empty handed.",
         description2:"The duo have worked wonders to make it this far and will hope to come away with silverware in Sunday's clash, as both teams play out their third MLS Cup final in the last four years. The Reds were unfortunate not to secure glory three years ago as they dominated proceedings on home turf, mustering 19 shots, seven of which were on target, to the Sounders' three and 54.2% possession.",
@@ -34,8 +34,8 @@ const posts = [
     {
         id:3,
         categoryId:3,
-        urlLink:"/BlogFootballMSL",
-        urlLinkHead:"/GermanBL",
+        urlLink:"/posts/3",
+        urlLinkHead:"/category/GermanBL",
         name:"What next for Bayern following Kovac sacking?",
         description:"Niko Kovac could have been sacked 12 months ago. In that sense, then, he has endured a year-long stay of execution. On Sunday evening, the former Croatia international was relieved of his duties at the Allianz Arena after Bayern fell to a 5-1 hammering at the hands of Kovac's former employers Eintracht Frankfurt.",
         description2:"The loss leaves Bayern just four points off top spot, yet a team of FC Hollywood's stature strives for first. The search, then, is on for Kovac's replacement as Bayern seek a manager who can deliver domestic and, perhaps more importantly, continental glory. His dismissal should have the most recognisable coaches on the continent dusting off their CV and hoping for the call to interview in Bavaria, but who would be best placed to succeed Kovac?",
@@ -45,13 +45,13 @@ const posts = [
         initRating:1,
         date:"05 November, 2019",
         image:"/images/BL/Kovach_hm.png",
-        imageHead:"/images/EPL/LFC_MC_post.png",
+        imageHead:"/images/BL/Kovac_post.png",
     },
     {
         id:4,
         categoryId:1,
-        urlLink:"/BlogFootballEPLKlopp",
-        urlLinkHead:"/EnglishPL",
+        urlLink:"/posts/4",
+        urlLinkHead:"/category/EnglishPL",
         name:"Liverpool vs Manchester: The ultimate 50/1 'Request A Bet'",
         description:"In what is undeniably the biggest game of the 2019/20 Premier League campaign so far Liverpool are aiming to protect their unbeaten record this season against reigning champions Manchester City.",
         description2:"Pep Guardiola's side travel to Anfield hoping to reduce the six-point gap that currently separates the sides and knows that defeat on Sunday could be critical to their title defence.",
@@ -61,7 +61,7 @@ const posts = [
         initRating:1,
         date:"09 November, 2019",
         image:"/images/EPL/Salah_hm.png",
-        imageHead:"/images/EPL/LFC_MC_post.png",
+        imageHead:"/images/EPL/Klo_Pep_post.png",
     },
 ]
 
